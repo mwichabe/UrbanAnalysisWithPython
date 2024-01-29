@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Triangle Numbers</title>
+</head>
+<body style="font-family: 'Arial', sans-serif; background-color: #f4f4f4; color: #333;">
+
+    <h1 style="color: #0066cc; text-align: center;">Triangle Numbers</h1>
+
+    <h2 style="color: #009900;">Explanation</h2>
+    <p>
+        A triangle number, or triangular number, is the sum of the natural numbers up to a certain point. It forms a triangle when arranged in dots. The formula for the nth triangle number (Tn) is given by:
+    </p>
+    
+    <div style="text-align: center; margin: 20px;">
+        <img src="{{ url_for('static', filename='triangle_diagram.png') }}" alt="Triangle Diagram" style="width: 200px; height: auto;">
+    </div>
+
+    <p style="text-align: center;">\[ T_n = \frac{n \cdot (n + 1)}{2} \]</p>
+
+    <h2 style="color: #009900;">Calculation</h2>
+    <p>
+        To calculate a triangle number, you can use the formula mentioned above. For example, to find the 5th triangle number:
+    </p>
+
+    <p style="text-align: center;">\[ T_5 = \frac{5 \cdot (5 + 1)}{2} = 15 \]</p>
+
+    <h2 style="color: #009900;">Icons for Better Understanding</h2>
+    <p>
+        Imagine stacking pebbles to form a triangular shape:
+    </p>
+
+    <div style="text-align: center; font-size: 36px;">
+        <span>&#x25A0;</span>
+        <span>&#x25A0; &#x25A0;</span>
+        <span>&#x25A0; &#x25A0; &#x25A0;</span>
+        <span>&#x25A0; &#x25A0; &#x25A0; &#x25A0;</span>
+        <span>&#x25A0; &#x25A0; &#x25A0; &#x25A0; &#x25A0;</span>
+    </div>
+
+</body>
+</html>
