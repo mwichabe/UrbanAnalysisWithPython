@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Triangle Numbers</title>
 </head>
 <body style="font-family: 'Arial', sans-serif; background-color: #f4f4f4; color: #333;">
@@ -16,17 +15,23 @@
     </p>
     
     <div style="text-align: center; margin: 20px;">
-        <img src="{{ url_for('static', filename='triangle_diagram.png') }}" alt="Triangle Diagram" style="width: 200px; height: auto;">
+        <img src="https://www.kidsmathgamesonline.com/images/pictures/shapes/triangle.jpg" alt="Triangle Diagram" style="width: 200px; height: auto;">
     </div>
 
     <p style="text-align: center;">\[ T_n = \frac{n \cdot (n + 1)}{2} \]</p>
 
-    <h2 style="color: #009900;">Calculation</h2>
+    <h2 style="color: #007bff; margin-top: 20px;">Sum of Triangular Numbers</h2>
     <p>
         To calculate a triangle number, you can use the formula mentioned above. For example, to find the 5th triangle number:
     </p>
 
-    <p style="text-align: center;">\[ T_5 = \frac{5 \cdot (5 + 1)}{2} = 15 \]</p>
+    <ul>
+        {% for n, ways in triangular_numbers_data.items() %}
+            <li style="background-color: #fff; padding: 10px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);">
+                Number {{ n }}: {{ ways }} ways to write as a sum of three triangular numbers
+            </li>
+        {% endfor %}
+    </ul>
 
     <h2 style="color: #009900;">Icons for Better Understanding</h2>
     <p>
